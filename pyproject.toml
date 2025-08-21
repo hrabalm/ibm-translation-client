@@ -1,0 +1,18 @@
+[project]
+name = "ibm-translation-client"
+version = "0.1.0"
+description = "An example client for internal document translation API."
+readme = "README.md"
+authors = [{ name = "Miroslav Hrabal", email = "mhn@email.cz" }]
+requires-python = ">=3.10"
+dependencies = ["click>=8.2.1", "httpx>=0.28.1", "tenacity>=9.1.2"]
+
+[project.scripts]
+ibm-translation-client = "ibm_translation_client.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["ruff>=0.12.9"]
